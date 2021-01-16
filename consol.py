@@ -3,17 +3,16 @@ import sys
 from colorama import init
 from colorama import Fore, Back, Style
 from command.help import *
-from command.Command import *
+from command.comman import *
 
 
-init()
-
-print(Fore.GREEN + "———————————————————————————————————————————————————\n‖Версия: 1.0                                      ‖\n" + 
-                   "‖OC: Windows                                      ‖\n‖© Broccoli                                       ‖" + 
-                   "\n———————————————————————————————————————————————————")
+print(Fore.LIGHTGREEN_EX + "———————————————————————————————————————————————————\n|Версия: 1.0                                      |\n" + 
+                   "|OC: Windows                                      |\n|© Broccoli                                       |\n" + 
+                   "———————————————————————————————————————————————————")         
 
 while True:
-    command = str(input(Fore.BLUE + "@> "))
+    print(Fore.LIGHTBLUE_EX)
+    command = str(input("$B> "))
 
     if command == "help":
         help()
@@ -27,5 +26,7 @@ while True:
     #    info()
     elif command == "pip install":
         pip_install(input("name package: "))
+    elif command == "system":
+        sstem()
     else:
         print("no command\nчтобы посмотреть доступные команды воспользйтесь 'help'")

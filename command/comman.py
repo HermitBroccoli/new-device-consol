@@ -6,8 +6,8 @@ def clear():
     init()
     if name == "nt":
         system("cls")
-        print(Fore.GREEN + "———————————————————————————————————————————————————\n‖Версия: 1.0                                      ‖\n" + 
-                   "‖OC: Windows                                      ‖\n‖© Broccoli                                       ‖" + 
+        print(Fore.LIGHTGREEN_EX + "———————————————————————————————————————————————————\n|Версия: 1.0                                      |\n" + 
+                   "|OC: Windows                                      |\n|© Broccoli                                       |" + 
                    "\n———————————————————————————————————————————————————")
 
 
@@ -23,10 +23,9 @@ def pip_install(pip):
 
 def sstem():
 
-    init()
     while True:
-
-        text = input(Fore.CYAN + "($CMD)>")
+        print(Fore.LIGHTCYAN_EX)
+        text = input("($CMD)>")
 
         if text != "system exit":
             system(text)
