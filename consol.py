@@ -5,28 +5,25 @@ from colorama import Fore, Back, Style
 from command.help import *
 from command.comman import *
 
-
 print(Fore.LIGHTGREEN_EX + "———————————————————————————————————————————————————\n|Версия: 1.0                                      |\n" + 
                    "|OC: Windows                                      |\n|© Broccoli                                       |\n" + 
                    "———————————————————————————————————————————————————")         
 
-while True:
-    print(Fore.LIGHTBLUE_EX)
-    command = str(input("$B> "))
+print
+help()
 
-    if command == "help":
-        help()
-    elif command == "exit":
-        sys.exit()
-    elif command == "ping":
-        ping(input("Адрес: "))
-    elif command == "cls":
+while True:
+    command = input(Fore.LIGHTBLUE_EX + "$B> ")
+
+    if command == "python":
+        python()
+    if command == "pip":
+        pip()
+    elif (command == "cls") or (command == "clear"):
         clear()
-    #elif command == "info":
-    #    info()
-    elif command == "pip install":
-        pip_install(input("name package: "))
     elif command == "system":
         sstem()
+    elif command == "help":
+        help()
     else:
         print("no command\nчтобы посмотреть доступные команды воспользйтесь 'help'")
