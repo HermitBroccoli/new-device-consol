@@ -9,12 +9,11 @@ from command.Command import *
 init()
 
 print(Fore.GREEN + "———————————————————————————————————————————————————\n‖Версия: 1.0                                      ‖\n" + 
-                   "‖OC: Windows                                      ‖\n‖©Broccoli                                        ‖" + 
-                   "\n———————————————————————————————————————————————————\n")
+                   "‖OC: Windows                                      ‖\n‖© Broccoli                                       ‖" + 
+                   "\n———————————————————————————————————————————————————")
 
 while True:
-    print(Fore.BLUE)
-    command = str(input("@> "))
+    command = str(input(Fore.BLUE + "@> "))
 
     if command == "help":
         help()
@@ -24,7 +23,9 @@ while True:
         ping(input("Адрес: "))
     elif command == "cls":
         clear()
-    elif command == "info":
-        info()
+    #elif command == "info":
+    #    info()
+    elif command == "pip install":
+        pip_install(input("name package: "))
     else:
-        print("no command")
+        print("no command\nчтобы посмотреть доступные команды воспользйтесь 'help'")

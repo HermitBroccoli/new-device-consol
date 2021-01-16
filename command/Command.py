@@ -1,18 +1,26 @@
+from colorama import init
+from colorama import Fore, Back, Style
 from os import system, name
-from sys import *
 
 def clear():
     
     if name == "nt":
         system("cls")
+        print(Fore.GREEN + "———————————————————————————————————————————————————\n‖Версия: 1.0                                      ‖\n" + 
+                   "‖OC: Windows                                      ‖\n‖© Broccoli                                       ‖" + 
+                   "\n———————————————————————————————————————————————————")
+
 
 def ping(ip):
-
-    try:
+    if ip != "":
         system(f"ping {ip}")
-    except:
-        print("не указан адрес")
+    else:
+        print("Некоректный адрес")    
+#
+#def info():
+#
+#    print(platform)
+#
+def pip_install(pip):
 
-def info():
-
-    print(platform)
+    system(f"pip install {pip}")
